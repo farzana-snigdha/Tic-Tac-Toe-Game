@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class UnitTest {
-    WinnerCheck WinnerCheck = new WinnerCheck();
+    WinnerCheck winnerCheck = new WinnerCheck();
     AI ai = new DefensiveAI();
     ButtonIndex buttonPosition;
 
@@ -14,8 +14,8 @@ public class UnitTest {
                 {"X",  "0",   "0"},
                 {"X", "boo", "boo"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertTrue(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -26,8 +26,8 @@ public class UnitTest {
                 { "X",  "0",  "X" },
                 {"boo", "0", "boo"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("X", gameBoard));
-        Assertions.assertTrue(WinnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("0", gameBoard));
 
     }
 
@@ -38,8 +38,8 @@ public class UnitTest {
                 { "X",  "boo", "0"},
                 {"boo", "boo", "0"}
         };
-        Assertions.assertTrue(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertFalse(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -50,8 +50,8 @@ public class UnitTest {
                 {"X",  "0",   "0"},
                 {"0", "boo", "boo"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertTrue(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -62,8 +62,8 @@ public class UnitTest {
                 {"0",  "0",  "0"},
                 {"X", "boo", "X"}
         };
-        Assertions.assertTrue(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertFalse(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -74,8 +74,8 @@ public class UnitTest {
                 {"X",  "0",   "0"},
                 {"X",  "X",   "X"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertTrue(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -86,8 +86,8 @@ public class UnitTest {
                 {"X",  "0",   "X"},
                 {"X",  "X",   "0"}
         };
-        Assertions.assertTrue(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertFalse(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -98,8 +98,8 @@ public class UnitTest {
                 {"X",  "X",  "0"},
                 {"X",  "0", "boo"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertTrue(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -110,8 +110,8 @@ public class UnitTest {
                 {"X",  "X",  "0"},
                 {"X",  "0",  "X"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertTrue(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertTrue(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -122,8 +122,8 @@ public class UnitTest {
                 {"X", "X", "0"},
                 {"X", "0", "X"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertFalse(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
@@ -134,15 +134,15 @@ public class UnitTest {
                 {"X", "0", "0"},
                 {"0", "X", "X"}
         };
-        Assertions.assertFalse(WinnerCheck.checkWinner("0", gameBoard));
-        Assertions.assertFalse(WinnerCheck.checkWinner("X", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("0", gameBoard));
+        Assertions.assertFalse(winnerCheck.checkWinner("X", gameBoard));
 
     }
 
     @Test
     void checkDrawTest() {
-        Assertions.assertFalse(WinnerCheck.drawCheck(3));
-        Assertions.assertTrue(WinnerCheck.drawCheck(5));
+        Assertions.assertFalse(winnerCheck.drawCheck(3));
+        Assertions.assertTrue(winnerCheck.drawCheck(5));
 
     }
 
